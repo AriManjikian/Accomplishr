@@ -1,0 +1,40 @@
+:root{
+    --bg-color-light: #fff;
+    --bg-color-dark: #272934;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.bg-shape{
+    position: absolute;
+    z-index: -10;
+}
+
+/*Dark Mode*/
+@media (prefers-color-scheme: dark) {
+    .light{
+        display: none;
+    }    
+    .dark{
+        display: block;
+    }
+    body{
+        background: var(--bg-color-dark);
+    }
+}
+
+/*Light Mode*/
+@media (prefers-color-scheme: light) {
+    .light{
+        display: block;
+    }    
+    .dark{
+        display: none;
+    }
+    body{
+        background: var(--bg-color-light);
+    }
+}
