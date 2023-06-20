@@ -1,16 +1,43 @@
 :root{
     --bg-color-light: #fff;
     --bg-color-dark: #272934;
+    --title-font: 'Work Sans', sans-serif;
 }
 
-body{
+*, *::before, *::after{
     margin: 0;
+}
+body{
     overflow-x: hidden;
 }
 
 .bg-shape{
     position: absolute;
     z-index: -10;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.GTD{
+    font-family: var(--title-font);
+    font-size: 5vw;
+    height: fit-content;
+}
+.GET-THINGS{
+    grid-column: 2/span 4;
+    grid-row-start: 3;
+}
+.DONE{
+    background: -webkit-repeating-linear-gradient(#33D630, #FBFF35);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    grid-column: 2/span 4;
+    grid-row-start: 4;
 }
 
 /*Dark Mode*/
