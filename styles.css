@@ -121,29 +121,6 @@ main{
 
 body.light{
     .light{
-        display: none;
-    }
-    .dark{
-        display: block;
-    }
-    .DONE{
-        background: -webkit-repeating-linear-gradient(var(--text-gradient-dark-1), var(--text-gradient-dark-2));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .navbar-ul li:hover{
-        cursor: pointer;
-        color: var(--hover-color-dark);
-    }
-    body{
-        background: var(--bg-color-dark);
-        color: #fafaf7;
-    }
-}
-
-body.dark{
-    .light{
         display: block;
     }    
     .dark{
@@ -162,5 +139,28 @@ body.dark{
     body{
         background: var(--bg-color-light);
         color: #1d1d1f;
+    }
+}
+
+body.dark{
+    .light{
+        display: none;
+    }
+    .dark{
+        display: block;
+    }
+    .DONE{
+        background: -webkit-repeating-linear-gradient(var(--text-gradient-dark-1), var(--text-gradient-dark-2));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .navbar-ul li:hover{
+        cursor: pointer;
+        color: var(--hover-color-dark);
+    }
+    body{
+        background: var(--bg-color-dark);
+        color: #fafaf7;
     }
 }
