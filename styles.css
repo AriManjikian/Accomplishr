@@ -1,16 +1,49 @@
 :root{
     --bg-color-light: #fff;
     --bg-color-dark: #272934;
-    --title-font: 'Work Sans', sans-serif;
+    --work-sans: 'Work Sans', sans-serif;
+    --text-gradient-light-1: #D635FF;
+    --text-gradient-light-2: #7A13CB;
+    --text-gradient-dark-1: #33D630;
+    --text-gradient-dark-2: #FBFF35;
+    --hover-color-dark: #58D855;
+    --hover-color-light: #7A13CB;
 }
 
 *, *::before, *::after{
     margin: 0;
 }
+
 body{
     overflow-x: hidden;
+    font-family: var(--work-sans);
 }
 
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    padding: 0.5rem;
+}
+
+.logo{
+    width: 4vw;
+    height: auto;
+}
+
+.navbar-ul{
+    position: absolute;
+    right: 0;
+}
+
+.navbar-ul li{
+    padding: 2.5rem;
+    list-style: none;
+    display: inline-block;
+}
+
+/*BG SHAPE*/
 .bg-shape{
     position: absolute;
     z-index: -10;
@@ -22,8 +55,9 @@ main{
     grid-template-rows: repeat(6, 1fr);
 }
 
+/*GET THINGS DONE*/
 .GTD{
-    font-family: var(--title-font);
+    font-family: var(--work-sans);
     font-size: 5vw;
     height: fit-content;
 }
@@ -32,10 +66,6 @@ main{
     grid-row-start: 3;
 }
 .DONE{
-    background: -webkit-repeating-linear-gradient(#33D630, #FBFF35);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     grid-column: 2/span 4;
     grid-row-start: 4;
 }
@@ -44,12 +74,23 @@ main{
 @media (prefers-color-scheme: dark) {
     .light{
         display: none;
-    }    
+    }
     .dark{
         display: block;
     }
+    .DONE{
+        background: -webkit-repeating-linear-gradient(var(--text-gradient-dark-1), var(--text-gradient-dark-2));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .navbar-ul li:hover{
+        cursor: pointer;
+        color: var(--hover-color-dark);
+    }
     body{
         background: var(--bg-color-dark);
+        color: #fafaf7;
     }
 }
 
@@ -61,7 +102,18 @@ main{
     .dark{
         display: none;
     }
+    .DONE{
+        background: -webkit-repeating-linear-gradient(var(--text-gradient-light-1), var(--text-gradient-light-2));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .navbar-ul li:hover{
+        cursor: pointer;
+        color: var(--hover-color-light);
+    }
     body{
         background: var(--bg-color-light);
+        color: #1d1d1f;
     }
 }
