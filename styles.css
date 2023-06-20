@@ -38,9 +38,10 @@ nav{
 }
 
 .navbar-ul li{
-    padding: 2.5rem;
+    padding-right: 3vw;
     list-style: none;
     display: inline-block;
+    font-size: 2dvw;
 }
 
 /*BG SHAPE*/
