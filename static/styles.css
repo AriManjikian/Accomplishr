@@ -74,7 +74,7 @@ nav{
 main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(12, 1fr);
 }
 
 /*GET THINGS DONE*/
@@ -93,13 +93,14 @@ main{
 }
 
 /*Get started today*/
-.get-started-today{
-    grid-column: 5/ span 5;
-    grid-row: 6/span 1;
+
+.sign-up{
     display: flex;
     flex-direction: column;
+    gap: 1vh;
     align-items: center;
-    gap: 0.5rem;
+    grid-column: 5/span 5;
+    grid-row: 6/ span 3;
 }
 
 .get-started-text{
@@ -110,7 +111,6 @@ main{
 .sign-up-btn{
     background-color: var(--sign-up-btn);
     color: var(--white-color);
-    padding: 0.75rem 1rem;
     border-radius: 10px;
     border: none;
     filter: drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.25));
@@ -172,5 +172,18 @@ main{
     body{
         background: var(--bg-color-light);
         color: #1d1d1f;
+    }
+}
+
+@media (orientation: landscape){
+    .sign-up-btn{
+        padding: 2vh 2vw;
+    }
+}
+
+
+@media (orientation: portrait){
+    .sign-up-btn{
+        padding: 2vw 1vh;
     }
 }
