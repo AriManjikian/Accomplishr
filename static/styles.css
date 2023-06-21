@@ -66,9 +66,8 @@ nav{
 
 .hand-phone{
     position: absolute;
-    width: 40vw;
+    width: 55vw;
     right: 0;
-    grid-row: 4;
 }
 
 main{
