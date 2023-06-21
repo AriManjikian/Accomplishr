@@ -110,6 +110,7 @@ main{
 
 .sign-up-btn{
     background-color: var(--sign-up-btn);
+    font-family: var(--work-sans);
     color: var(--white-color);
     border-radius: 10px;
     border: none;
