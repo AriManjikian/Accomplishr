@@ -15,14 +15,15 @@
     --hover-color-light: #7A13CB;
     --sign-up-btn-hover: #28282b;
     /*navbar*/
-    --navbar-color-dark: #3D465F;
-    --navbar-color-light: #E4E4E4;
+    --dark-secondary: #3D465F;
+    --light-navbar: #E4E4E4;
     /*btn*/
-    --sign-up-btn: #1d1d1f;
+    --light-secondary: #1d1d1f;
 }
 
 *, *::before, *::after{
     margin: 0;
+    user-select: none;
 }
 
 body{
@@ -108,17 +109,43 @@ main{
 }
 
 .sign-up-btn{
-    background-color: var(--sign-up-btn);
+    background-color: var(--light-secondary);
     font-family: var(--work-sans);
     color: var(--white-color);
     border-radius: 10px;
     border: none;
-    filter: drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.5));
 }
 
 .sign-up-btn:hover{
     background-color: var(--sign-up-btn-hover);
     cursor: pointer;
+}
+
+/*Download the app*/
+
+.download{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column: 5/span 4;
+    grid-row: 10/span 4;    
+    justify-self: center;
+    justify-content: center;
+    gap: 5%;
+    height: fit-content;
+    padding: 5%;
+    border-radius: 1rem;
+}
+
+.download h3{
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.download a{
+    height: fit-content;
 }
 
 /*Dark Mode*/
@@ -136,11 +163,14 @@ main{
         -webkit-text-fill-color: transparent;
     }
     nav{
-        background-color: var(--navbar-color-dark);
+        background-color: var(--dark-secondary);
     }
     .navbar-ul li:hover{
         cursor: pointer;
         color: var(--hover-color-dark);
+    }
+    .download{
+        background-color: var(--dark-secondary);
     }
     body{
         background: var(--bg-color-dark);
@@ -163,11 +193,14 @@ main{
         -webkit-text-fill-color: transparent;
     }
     nav{
-        background-color: var(--navbar-color-light);
+        background-color: var(--light-navbar);
     }
     .navbar-ul li:hover{
         cursor: pointer;
         color: var(--hover-color-light);
+    }
+    .download{
+        background-color: var(--light-secondary);
     }
     body{
         background: var(--bg-color-light);
@@ -179,11 +212,17 @@ main{
     .sign-up-btn{
         padding: 2vh 2vw;
     }
+    .download img{
+        width: 15vw;
+    }
 }
 
 
 @media (orientation: portrait){
     .sign-up-btn{
         padding: 2vw 1vh;
+    }
+    .download img{
+        width: 10vh;
     }
 }
