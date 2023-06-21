@@ -8,6 +8,8 @@
     --text-gradient-dark-2: #FBFF35;
     --hover-color-dark: #58D855;
     --hover-color-light: #7A13CB;
+    --navbar-color-dark: #3D465F;
+    --navbar-color-light: #E4E4E4;
 }
 
 *, *::before, *::after{
@@ -25,10 +27,12 @@ nav{
     align-items: center;
     width: 100vw;
     padding: 0.5rem;
+    border-bottom: 2px solid #272934;
 }
 
 .logo{
     width: 4vw;
+    min-width: 3vh;
     height: auto;
 }
 
@@ -41,7 +45,7 @@ nav{
     padding-right: 3vw;
     list-style: none;
     display: inline-block;
-    font-size: 2dvw;
+    font-size: minmax(2dvw, 3dvh);
 }
 
 /*BG SHAPE*/
@@ -85,6 +89,9 @@ main{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    nav{
+        background-color: var(--navbar-color-dark);
+    }
     .navbar-ul li:hover{
         cursor: pointer;
         color: var(--hover-color-dark);
@@ -108,6 +115,9 @@ main{
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+    nav{
+        background-color: var(--navbar-color-light);
     }
     .navbar-ul li:hover{
         cursor: pointer;
