@@ -20,6 +20,9 @@ body{
     overflow-x: hidden;
     font-family: var(--work-sans);
 }
+.wrapper{
+    overflow-x: hidden;
+}
 
 nav{
     display: flex;
