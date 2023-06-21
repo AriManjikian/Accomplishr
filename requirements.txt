@@ -1,0 +1,6 @@
+Flask
+flask_session
+gunicorn
+sqlalchemy
+pymysql
+python-dotenv
