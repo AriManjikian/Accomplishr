@@ -201,6 +201,7 @@ main{
     }
     .download{
         background-color: var(--light-secondary);
+        color: var(--white-color);
     }
     body{
         background: var(--bg-color-light);
