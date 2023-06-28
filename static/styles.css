@@ -176,6 +176,12 @@ main {
   -webkit-perspective: 1000px;
   perspective: 1000px;
 }
+
+.carousel-item img{
+  padding: 1rem;
+  width: 45%;
+}
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
@@ -242,10 +248,10 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 15%;
   color: #fff;
   text-align: center;
   opacity: 0.5;
+  font-size: 1.5vw;
 }
 .carousel-control-next:focus,
 .carousel-control-next:hover,
@@ -265,8 +271,8 @@ main {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 2vw;
+  aspect-ratio: 1/1;
   background: transparent no-repeat center center;
   background-size: 100% 100%;
 }
@@ -325,17 +331,6 @@ main {
 }
 .carousel-indicators .active {
   background-color: #fff;
-}
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
 }
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {
