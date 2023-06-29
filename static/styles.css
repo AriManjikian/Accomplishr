@@ -392,7 +392,6 @@ input[type="radio"]{
   cursor: pointer;
   font-size: 2.5dvw;
   font-weight: 900;
-  border-bottom: 2px solid #272934;
 }
 
 .accordion label::before{
@@ -453,6 +452,9 @@ input[type="radio"]{
     background-color: var(--dark-secondary);
     color: var(--white-color);
   }
+  .accordion input[data-status="checked"] + label{
+    border-bottom: 2px solid var(--bg-color-dark);
+  }
   body {
     background: var(--bg-color-dark);
     color: #fafaf7;
@@ -491,6 +493,9 @@ input[type="radio"]{
   .carousel-item, .accordion-item{
     background-color: var(--light-secondary);
     color: var(--white-color);
+  }
+  .accordion input[data-status="checked"] + label{
+    border-bottom: 2px solid var(--bg-color-light);
   }
   body {
     background: var(--bg-color-light);
