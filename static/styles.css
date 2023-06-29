@@ -181,7 +181,7 @@ main {
   grid-column: 1;
   grid-row: 1/span 2;
   padding: 1rem;
-  width: 45%;
+  width: 65%;
 }
 
 .carousel-item-next,
