@@ -174,13 +174,12 @@ main {
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
   perspective: 1000px;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .carousel-item img{
   grid-column: 1;
   grid-row: 1/span 2;
-  padding: 1rem;
   width: 65%;
 }
 
@@ -365,6 +364,9 @@ main {
   .download {
     background-color: var(--dark-secondary);
   }
+  .carousel-item{
+    background-color: var(--dark-secondary);
+  }
   body {
     background: var(--bg-color-dark);
     color: #fafaf7;
@@ -398,6 +400,9 @@ main {
   .download {
     background-color: var(--light-secondary);
     color: var(--white-color);
+  }
+  .carousel-item{
+    background-color: var(--light-secondary);
   }
   body {
     background: var(--bg-color-light);
