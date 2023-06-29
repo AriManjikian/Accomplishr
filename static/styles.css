@@ -38,14 +38,14 @@ nav {
   flex-direction: row;
   align-items: center;
   width: 100vw;
-  padding: 0.5rem;
   border-bottom: 2px solid #272934;
 }
 
 .logo {
-  width: 4vw;
+  width: 5vw;
   min-width: 3vh;
   height: auto;
+  padding: 0.75rem;
 }
 
 .navbar-ul {
@@ -355,21 +355,26 @@ main {
   display: flex;
   flex-direction: column;
   width: 80dvw;
-  align-items: center;
   margin: auto;
+  align-items: center;
   gap: 2rem;
 }
 
 .accordion{
+  padding: 0;
+  width: 80dvw;
   list-style: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5dvw;
 }
 
 .accordion-item{
   width: 100%;
-  box-shadow: 6px 6px 10px -1px rgb(0,0,0, 0.15),
+  box-shadow: 6px 6px 10px -1px rgb(0,0,0, 0.15);
+  border-radius: 0.75rem;
 }
 
 h3{
@@ -387,6 +392,7 @@ input[type="radio"]{
   cursor: pointer;
   font-size: 2.5dvw;
   font-weight: 900;
+  border-bottom: 2px solid #272934;
 }
 
 .accordion label::before{
@@ -395,23 +401,23 @@ input[type="radio"]{
 }
 
 .accordion-text{
-  font-size: 2dvw;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   padding: 0dvw;
   max-height: 0;
   scale: 0;
   overflow: hidden;
   transition: scale 0.25s ease-in-out;
+  opacity: 0.9;
 }
 
-.accordion input[type='radio']:checked + label + .accordion-text{
+.accordion input[data-status="checked"] + label + .accordion-text{
   max-height: fit-content;
   scale: 1;
   padding: 1dvw;
 }
 
-.accordion input[type='radio']:checked + label::before{
+.accordion input[data-status="checked"] + label::before{
   content: '-';
 }
 
@@ -503,6 +509,9 @@ input[type="radio"]{
   .navbar-ul li {
     font-size: 1.5dvw;
   }
+  .accordion-text{
+    font-size: 2dvw;
+  }
 }
 
 @media (orientation: portrait) {
@@ -515,5 +524,8 @@ input[type="radio"]{
   }
   .navbar-ul li {
     font-size: 1.5dvh;
+  }
+  .accordion-text{
+    font-size: 2.5dvw;
   }
 }
