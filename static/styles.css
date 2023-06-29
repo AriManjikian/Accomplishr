@@ -57,7 +57,6 @@ nav {
   padding-right: 3vw;
   list-style: none;
   display: inline-block;
-  font-size: minmax(2dvw, 3dvh);
 }
 
 /*BG SHAPE And Hand Phone*/
@@ -118,7 +117,8 @@ main {
   filter: drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.5));
 }
 
-.sign-up-btn:hover {
+.sign-up-btn:hover,
+.sign-up-btn:focus {
   background-color: var(--sign-up-btn-hover);
   cursor: pointer;
 }
@@ -153,6 +153,7 @@ main {
 /*Carousel*/
 
 .carousel {
+  margin-top: 2rem;
   position: relative;
 }
 .carousel-inner {
@@ -174,7 +175,7 @@ main {
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
   perspective: 1000px;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .carousel-item img{
@@ -183,11 +184,18 @@ main {
   width: 65%;
 }
 
+.carousel-text-large{
+  font-size: 2.5vw;
+  align-self: self-end;
+  justify-self: left;
+  grid-column: span 2;
+}
+
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
@@ -337,6 +345,7 @@ main {
 .carousel-indicators .active {
   background-color: #fff;
 }
+
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {
   .light {
@@ -357,7 +366,8 @@ main {
   nav {
     background-color: var(--dark-secondary);
   }
-  .navbar-ul li:hover {
+  .navbar-ul li:hover,
+  .navbar-ul li:focus {
     cursor: pointer;
     color: var(--hover-color-dark);
   }
@@ -393,7 +403,8 @@ main {
   nav {
     background-color: var(--light-navbar);
   }
-  .navbar-ul li:hover {
+  .navbar-ul li:hover,
+  .navbar-ul li:focus {
     cursor: pointer;
     color: var(--hover-color-light);
   }
@@ -418,6 +429,9 @@ main {
   .download img {
     width: 15vw;
   }
+  .navbar-ul li {
+    font-size: 1.5dvw;
+  }
 }
 
 @media (orientation: portrait) {
@@ -427,5 +441,8 @@ main {
   }
   .download img {
     width: 10vh;
+  }
+  .navbar-ul li {
+    font-size: 1.5dvh;
   }
 }
