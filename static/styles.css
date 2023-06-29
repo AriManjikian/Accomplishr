@@ -185,7 +185,8 @@ main {
 }
 
 .carousel-text-large{
-  font-size: 2.5vw;
+  width: 25ch;
+  font-size: 3vw;
   align-self: self-end;
   justify-self: left;
   grid-column: span 2;
@@ -199,6 +200,7 @@ main {
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
+  overflow-wrap: break-word;
 }
 .carousel-item-next,
 .carousel-item-prev {
@@ -376,6 +378,7 @@ main {
   }
   .carousel-item{
     background-color: var(--dark-secondary);
+    color: var(--white-color);
   }
   body {
     background: var(--bg-color-dark);
@@ -414,6 +417,7 @@ main {
   }
   .carousel-item{
     background-color: var(--light-secondary);
+    color: var(--white-color);
   }
   body {
     background: var(--bg-color-light);
