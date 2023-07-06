@@ -368,6 +368,7 @@ main {
   margin: auto;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 5dvw;
 }
 
 .accordion{
@@ -430,6 +431,79 @@ input[type="radio"]{
   content: '-';
 }
 
+/*Contact Footer*/
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: max-content;
+  gap: 5dvw;  
+  width: 70dvw;
+  padding: 2dvw;
+  border-radius: 3rem;
+}
+
+footer h5{
+  font-size: 3dvw;
+}
+
+.inputs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2dvw;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field label{
+  font-size: 1dvw;
+}
+
+.field input{
+  width: 15dvw;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(240, 240, 240, 0.5);
+  caret-color: var(--white-color);
+  color: var(--white-color);
+  font-size: 1.5dvw;
+}
+
+.field input:focus{
+  outline: none;
+}
+
+.message{
+  grid-column: span 2;
+}
+.message input{
+  width: 100%;
+}
+
+.send-message{
+  font-weight: 600;
+  font-size: 1.5dvw;
+  border-radius: 1dvw;
+  border: none;
+  padding: 1dvw;
+}
+
+.social-media{
+  display: flex;
+  flex-direction: row;
+  gap: 1dvw;
+}
+
+.social-media img{
+  width: 3dvw;
+}
+
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {
   .light {
@@ -464,6 +538,9 @@ input[type="radio"]{
   }
   .accordion input[data-status="checked"] + label{
     border-bottom: 2px solid var(--bg-color-dark);
+  }
+  footer{
+    background-color: var(--dark-secondary);
   }
   body {
     background: var(--bg-color-dark);
@@ -506,6 +583,9 @@ input[type="radio"]{
   }
   .accordion input[data-status="checked"] + label{
     border-bottom: 2px solid var(--bg-color-light);
+  }
+  footer{
+    background-color: var(--light-secondary);
   }
   body {
     background: var(--bg-color-light);
