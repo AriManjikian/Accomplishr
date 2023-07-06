@@ -85,6 +85,7 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
+  padding-top: 5dvw;
 }
 
 /*GET THINGS DONE*/
@@ -441,7 +442,7 @@ footer{
   gap: 5dvw;  
   width: 70dvw;
   padding: 2dvw;
-  border-radius: 3rem;
+  border-radius: 3vw;
 }
 
 footer h5{
