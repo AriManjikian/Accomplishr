@@ -486,7 +486,7 @@ footer h5{
   font-size: 1.5dvw;
   box-shadow: none;
   outline: none;
-  border-radius: none;
+  border-radius: none !important;
 }
 
 .field input:focus{
