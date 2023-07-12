@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pyrebase
 
+#firebase config
 config = {
   "apiKey": "AIzaSyB_4HVA1MMQWi56kUgrzwtsTrBh0itSa3o",
   "authDomain": "accomplishr-78ffd.firebaseapp.com",
@@ -14,9 +15,13 @@ config = {
 
 app = Flask(__name__)
 
+#FIREBASE
 firebaseApp = pyrebase.initialize_app(config)
 database = firebaseApp.database()
+auth = firebaseApp.auth()
 
+
+#FLASK
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -31,3 +36,4 @@ def signup():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
+    
