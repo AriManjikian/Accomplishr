@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accomplishr - Sign Up!</title>
-    <link rel="stylesheet" href="../static/styles.css">
-    <script src="../static/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accomplishr - Sign Up!</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <script src="../static/main.js" defer></script>
 </head>
-<body>
-    <input type="text" name="email" id="" placeholder="email">
-    <input type="text" name="username" id="" placeholder="username">
-    <input type="text" name="password" id="" placeholder="password">
-    <input type="text" name="confirm" id="" placeholder="confirm">
+<body class="signup-body">
+  <img class="dark" src="../static/media/dark-signup-bg.png" alt="">
+  <img class="light" src="../static/media/light-signup-bg.png" alt="">
+	<div class="signup-form">
+		<h4>Create an account</h4>
+		<form action="/signup" method="post">
+				<input type="text" name="email" id="" placeholder="example@gmail.com">
+				<input type="text" name="username" id="" placeholder="Username">
+				<input type="text" name="password" id="" placeholder="Password">
+				<input type="text" name="confirm" id="" placeholder="Confirm Your Password">
+		</form>
+		<button type="submit">Sign Up!</button>
+	</div>
 </body>
-</html>
+</html

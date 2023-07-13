@@ -520,6 +520,76 @@ footer h5{
   width: 3dvw;
 }
 
+
+/*Sign Up*/
+.signup-body{
+  display: flex;
+  height: 100dvh;
+  width: 100dvw;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-body img{
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  z-index: -10;
+  opacity: 0.7;
+  object-fit: cover;
+}
+
+.signup-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1dvw;
+  max-width: 250px;
+  width: 50dvw;
+  height: fit-content;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  align-items: center;
+  justify-content: center;
+  padding: 3dvw 2dvw;
+  border-radius: 0.75rem;
+}
+
+.signup-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5dvw;
+}
+
+.signup-form h4{
+  font-size: 2dvh;
+}
+
+.signup-form form input{
+  height: 2dvw;
+  min-height: 30px;
+  padding: 0 1dvw;
+  border-radius: 1rem;
+  width: 90%;
+  box-shadow: none;
+  border: none;
+  background-color: rgb(50,50,50, 0.9);
+}
+
+.signup-form form input:focus{
+  outline: none;
+}
+
+.signup-form button{
+  border: none;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+
 /*Dark Mode*/
 @media (prefers-color-scheme: dark) {
   .light {
@@ -557,6 +627,12 @@ footer h5{
   }
   footer{
     background-color: var(--dark-secondary);
+  }
+  .signup-form button{
+    background-color: var(--hover-color-dark);
+  }
+  .signup-form form input{
+    background-color: rgb(50,50,50, 0.9);
   }
   body {
     background: var(--bg-color-dark);
@@ -603,6 +679,14 @@ footer h5{
   footer{
     background-color: var(--light-secondary);
   }
+  .signup-form button{
+    background-color: var(--hover-color-light);
+    color: rgb(240, 240, 240, 0.9);
+  }
+  .signup-form form input{
+    background-color: rgb(250,250,250, 0.8);
+    border: 1px solid rgb(0,0,0, 0.15);
+  }
   body {
     background: var(--bg-color-light);
     color: #1d1d1f;
@@ -623,6 +707,13 @@ footer h5{
   .accordion-text{
     font-size: 2dvw;
   }
+  .signup-form h4{
+    font-size: 2dvh;
+  }
+  .signup-form button{
+    padding: 1.5vh 2vh;
+  }
+  
 }
 
 @media (orientation: portrait) {
@@ -639,7 +730,13 @@ footer h5{
   .accordion-text{
     font-size: 2.5dvw;
   }
+  .signup-form h4{
+    font-size: 2dvh;
+  }
   .carousel-text-small{
     scale: 0;
+  }
+  .signup-form button{
+    padding: 1.5vw 2vw;
   }
 }
