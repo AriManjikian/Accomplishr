@@ -549,7 +549,6 @@ footer h5{
   background-color: transparent;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
   align-items: center;
   justify-content: center;
   padding: 3dvw 2dvw;
@@ -572,7 +571,8 @@ footer h5{
   height: 2dvw;
   min-height: 30px;
   padding: 0 1dvw;
-  border-radius: 1rem;
+  border-radius: 0.25rem;
+  
   width: 90%;
   box-shadow: none;
   border: none;
@@ -629,11 +629,17 @@ footer h5{
   footer{
     background-color: var(--dark-secondary);
   }
+  .signup-form{
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
   .signup-form button{
     background-color: var(--hover-color-dark);
   }
   .signup-form form input{
     background-color: rgb(50,50,50, 0.9);
+    border: 1px solid rgb(190,190,190, 0.15);
+    caret-color: rgb(240, 240, 240, 0.5);
+    color: rgb(240, 240, 240, 0.5);
   }
   body {
     background: var(--bg-color-dark);
@@ -680,13 +686,18 @@ footer h5{
   footer{
     background-color: var(--light-secondary);
   }
+  .signup-form{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
   .signup-form button{
     background-color: var(--hover-color-light);
     color: rgb(240, 240, 240, 0.9);
   }
   .signup-form form input{
-    background-color: rgb(250,250,250, 0.8);
+    background-color: rgb(20,20,20, 0.9);
     border: 1px solid rgb(0,0,0, 0.15);
+    caret-color: rgb(255, 255, 255, 0.9);
+    color: rgb(255, 255, 255, 0.9);
   }
   body {
     background: var(--bg-color-light);
