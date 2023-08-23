@@ -2,5 +2,5 @@ Flask
 flask_session
 gunicorn
 python-dotenv
-pyrebase4
 wheel
+firebase_admin

@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
-import pyrebase
+import firebase_admin
+from firebase_admin import credentials, db, auth
+
 
 #firebase config
 config = {
@@ -16,9 +18,10 @@ config = {
 app = Flask(__name__)
 
 #FIREBASE
-firebaseApp = pyrebase.initialize_app(config)
-database = firebaseApp.database()
-auth = firebaseApp.auth()
+cred = credentials.Certificate("credentials.json")
+firebaseApp = firebase_admin.initialize_app(cred, {"databaseURL": "https://accomplishr-78ffd-default-rtdb.firebaseio.com/"})
+ref = db.reference('/Users')
+ref.push({'name':'boghos', 'email': 'bkaradanayan@blig.com'})
 
 
 #FLASK
@@ -31,7 +34,16 @@ def signup():
     if request.method == "GET":
         return render_template("signup.html")
     else:
-        return render_template("index.html")
+        email = request.form.get('email')
+        username = request.form.get('username')
+        password = request.form.get('password')
+        confirm = request.form.get('confirm')
+        
+        if password == confirm:
+            ref = db.reference('/Users')
+            ref.push({'name':'boghos', 'email': 'bkaradanayan@blig.com'})
+            print('rigev')
+        return render_template("thankyou.html")
 
 
 if __name__ == "__main__":
