@@ -12,9 +12,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/privacy-policy")
+@app.route("/privacypolicy")
 def privacypolicy():
-    return render_template("privacy-policy.html")
+    return render_template("privacypolicy.html")
 
 
 
