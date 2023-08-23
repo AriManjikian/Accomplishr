@@ -13,7 +13,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/privacy-policy")
-def index():
+def privacypolicy():
     return render_template("privacy-policy.html")
 
 
