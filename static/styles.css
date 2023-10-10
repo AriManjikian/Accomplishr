@@ -77,8 +77,9 @@ nav a{
 
 .hand-phone {
   position: absolute;
-  width: 60vw;
-  right: 0;
+  width: 40vw;
+  right: 5dvw;
+  top: 8dvh;
 }
 
 main {
@@ -137,14 +138,12 @@ main {
 /*Download the app*/
 
 .download {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 3dvw;
+  align-items: center;
   grid-column: 5 / span 4;
   grid-row: 10 / span 4;
-  justify-self: center;
-  justify-content: center;
-  gap: 5%;
   height: fit-content;
   padding: 5%;
   border-radius: 1rem;
